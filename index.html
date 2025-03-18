@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rajdeep Pal" />
+    <meta
+      name="description"
+      content="This is a simple website for learning purpose"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Portfolio, Rajdeep Pal, Rajdeep, Pal, Rajdeep Pal Portfolio, Web developer, Web developer Rajdeep Pal"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="../Image/bg2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Audiowide&family=Delicious+Handrawn&family=Delius&family=Macondo+Swash+Caps&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      .macondo-swash-caps-regular {
+        font-family: "Macondo Swash Caps", cursive;
+      }
+      .delicious-handrawn-regular {
+        font-family: "Delicious Handrawn", cursive;
+      }
+      .aclonica-regular {
+        font-family: "Aclonica", sans-serif;
+      }
+      .audiowide-regular {
+        font-family: "Audiowide", sans-serif;
+      }
+      .delius-regular {
+        font-family: "Delius", cursive;
+      }
+      .tilt-prism {
+        font-family: "Tilt Prism", sans-serif;
+      }
+      .space-mono-regular {
+        font-family: "Space Mono", monospace;
+      }
+    </style>
+    <title>Rajdeep Pal</title>
+  </head>
+  <body
+    class="max-w-screen min-h-screen flex flex-col items-center bg-[#292f36]"
+  >
+    <!-- fully functional navbar -->
+    <nav class="mt-5 h-[50px] w-[1440px] flex justify-between items-center">
+      <div
+        class="macondo-swash-caps-regular cursor-pointer text-[#f7fff7] text-[40px] font-extrabold text-center"
+      >
+        RajdeepPal<span class="text-[#4ecdc4]">.me</span>
+      </div>
+      <div
+        class="aclonica-regular text-[20px] font-bold text-[#f7fff7] flex justify-evenly items-center"
+      >
+        <a href="/" class="scale-115 text-[#4ecdc4] mx-[20px] underline"
+          >Home</a
+        >
+        <a
+          href="/service.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Service</a
+        >
+        <a
+          href="/resume.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Resume</a
+        >
+        <a href="/work.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Work</a
+        >
+        <a href="/contact.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Contact</a
+        >
+        <a
+          href="/contact.html"
+          class="hover:scale-115 px-5 py-2 bg-[#4ecdc4] text-[#292f36] rounded-full"
+          >Hire Me</a
+        >
+      </div>
+    </nav>
+
+    <!-- main content1 -->
+    <main
+      class="mt-5 w-[1440px] min-h-[calc(100vh-90px)] flex flex-col justify-evenly items-center"
+    >
+      <!-- main top contents   -->
+      <div class="w-full flex justify-between items-center">
+        <!-- left contents -->
+        <div class="flex flex-col justify-between min-h-[400px]">
+          <!-- naming -->
+          <div>
+            <p class="text-[15px] audiowide-regular text-[#f7fff7] -mb-5">
+              Student & Software Developer
+            </p>
+            <p
+              class="text-[60px] space-mono-regular font-extrabold text-[#f7fff7] -mb-10"
+            >
+              Hello I'm
+            </p>
+            <p
+              class="text-[70px] mb-[10px] tilt-prism font-extrabold text-[#4ecdc4]"
+            >
+              Rajdeep Pal
+            </p>
+          </div>
+          <!-- about -->
+          <p class="text-[20px] text-[#F7FFF7] font-mono text-justify">
+            Focused and determined tech enthusiast with a strong foundation in
+            computer science. Skilled in multiple programming languages and
+            frameworks, eager to adapt to new technologies, and passionate about
+            software development and project management.
+          </p>
+          <!-- social media icons -->
+          <div class="flex gap-5 mt-[30px]">
+            <!-- cv download -->
+            <div
+              class="text-[#f7fff7] text-[20px] font-mono border-1 rounded-full flex justify-center items-center px-5 py-2 cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+            >
+              DOWNLOAD CV <i class="fa-solid fa-download"></i>
+            </div>
+            <!-- github -->
+            <div
+              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+            >
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <!-- linkedin -->
+            <div
+              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+            <!-- hackerRank -->
+            <div
+              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+            >
+              <i class="fa-brands fa-hackerrank"></i>
+            </div>
+            <!-- instagram -->
+            <div
+              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <!-- facebook -->
+            <div
+              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+        </div>
+        <!-- right contents -->
+        <div
+          class="min-w-[500px] min-h-[500px] flex justify-center items-center"
+        >
+          <div
+            class="h-[420px] w-[420px] flex justify-center items-center bg-gradient-to-t from-[#4ecdc4] via-transparent to-[#4ecdc4] rounded-full animate-spin"
+          >
+            <div
+              class="h-[415px] w-[415px] flex justify-center items-center bg-[#292f36] rounded-full"
+            >
+              <div
+                class="h-[410px] w-[410px] flex justify-center items-center bg-gradient-to-t from-[#4ecdc4] via-transparent to-[#4ecdc4] rounded-full animate-spin"
+              >
+                <div
+                  class="h-[405px] w-[405px] bg-[#292f36] rounded-full"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../Image/download.png"
+            alt="Rajdeep Pal"
+            class="w-[400px] absolute broder-2 border-[#4ecdc4] object-cover rounded-full object-center h-[400px]"
+          />
+        </div>
+      </div>
+      <!-- main bottom content2 -->
+      <div
+        class="w-full flex text-[#F7FFF7] flex-wrap justify-evenly items-center"
+      >
+        <!-- my experience -->
+        <div class="flex items-center gap-2">
+          <p class="text-[50px] tilt-prism" id="experience">0</p>
+          <div class="text-[20px] space-mono-regular">
+            <p>Events</p>
+            <p>Participation</p>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let count = 20;
+              const countElement = document.getElementById("experience");
+              let a = 0;
+              const interval = setInterval(() => {
+                if (a <= count) {
+                  countElement.textContent = a;
+                  a++;
+                } else {
+                  clearInterval(interval);
+                }
+              }, 100);
+            });
+          </script>
+        </div>
+        <!-- projects -->
+        <div class="flex items-center gap-2">
+          <p class="text-[50px] tilt-prism" id="projects">0</p>
+          <div class="text-[20px] space-mono-regular">
+            <p>Total complete</p>
+            <p>projects</p>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let count = 10;
+              const countElement = document.getElementById("projects");
+              let a = 0;
+              const interval = setInterval(() => {
+                if (a <= count) {
+                  countElement.textContent = a;
+                  a++;
+                } else {
+                  clearInterval(interval);
+                }
+              }, 100);
+            });
+          </script>
+        </div>
+        <!-- technologies -->
+        <div class="flex items-center gap-2">
+          <p class="text-[50px] tilt-prism" id="technologies">0</p>
+          <div class="text-[20px] space-mono-regular">
+            <p>Technologies</p>
+            <p>Mastered</p>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let count = 5;
+              const countElement = document.getElementById("technologies");
+              let a = 0;
+              const interval = setInterval(() => {
+                if (a <= count) {
+                  countElement.textContent = a;
+                  a++;
+                } else {
+                  clearInterval(interval);
+                }
+              }, 100);
+            });
+          </script>
+        </div>
+        <!-- code -->
+        <div class="flex items-center gap-2">
+          <p class="text-[50px] tilt-prism" id="code">0</p>
+          <div class="text-[20px] space-mono-regular">
+            <p>Code</p>
+            <p>Commits</p>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              let count = 30;
+              const countElement = document.getElementById("code");
+              let a = 0;
+              const interval = setInterval(() => {
+                if (a <= count) {
+                  countElement.textContent = a;
+                  a++;
+                } else {
+                  clearInterval(interval);
+                }
+              }, 100);
+            });
+          </script>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

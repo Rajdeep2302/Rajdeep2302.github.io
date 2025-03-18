@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Rajdeep Pal" />
+    <meta
+      name="description"
+      content="This is a simple website for learning purpose"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Portfolio, Rajdeep Pal, Rajdeep, Pal, Rajdeep Pal Portfolio, Web developer, Web developer Rajdeep Pal"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="icon" href="../Image/bg2.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Audiowide&family=Delicious+Handrawn&family=Delius&family=Macondo+Swash+Caps&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      .macondo-swash-caps-regular {
+        font-family: "Macondo Swash Caps", cursive;
+      }
+      .delicious-handrawn-regular {
+        font-family: "Delicious Handrawn", cursive;
+      }
+      .aclonica-regular {
+        font-family: "Aclonica", sans-serif;
+      }
+      .audiowide-regular {
+        font-family: "Audiowide", sans-serif;
+      }
+      .delius-regular {
+        font-family: "Delius", cursive;
+      }
+      .tilt-prism {
+        font-family: "Tilt Prism", sans-serif;
+      }
+      .space-mono-regular {
+        font-family: "Space Mono", monospace;
+      }
+    </style>
+    <title>Rajdeep Pal</title>
+  </head>
+  <body
+    class="max-w-screen min-h-screen flex flex-col items-center bg-[#292f36]"
+  >
+    <!-- fully functional navbar -->
+    <nav class="mt-5 h-[50px] w-[1440px] flex justify-between items-center">
+      <div
+        class="macondo-swash-caps-regular cursor-pointer text-[#f7fff7] text-[40px] font-extrabold text-center"
+      >
+        RajdeepPal<span class="text-[#4ecdc4]">.me</span>
+      </div>
+      <div
+        class="aclonica-regular text-[20px] font-bold text-[#f7fff7] flex justify-evenly items-center"
+      >
+        <a href="/" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Home</a
+        >
+        <a
+          href="/service.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Service</a
+        >
+        <a
+          href="/resume.html"
+          class="scale-115 text-[#4ecdc4] mx-[20px] underline"
+          >Resume</a
+        >
+        <a href="/work.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Work</a
+        >
+        <a href="/contact.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Contact</a
+        >
+        <a
+          href="/contact.html"
+          class="hover:scale-115 px-5 py-2 bg-[#4ecdc4] text-[#292f36] rounded-full"
+          >Hire Me</a
+        >
+      </div>
+    </nav>
+
+    <!-- main content1 -->
+    <main
+      class="mt-[80px] w-[1440px] min-h-[calc(100vh-150px)] flex justify-between items-start"
+    >
+      <!-- resume menu -->
+      <div class="w-[400px] flex flex-col p-3 gap-5 text-[#f7fff7]">
+        <p class="text-[50px] audiowide-regular">Why hire me?</p>
+        <p class="font-mono text-[20px]">
+          Skilled, adaptable, innovative, problem-solver, leadership,
+          tech-driven, passionate.
+        </p>
+        <!-- Buttons -->
+        <div
+          id="btn-experience"
+          onclick="showExperience()"
+          class="text-center p-2.5 text-[20px] rounded-md font-bold hover:scale-110 transition-all duration-300 font-serif cursor-pointer"
+        >
+          Experience
+        </div>
+
+        <div
+          id="btn-education"
+          onclick="showEducation()"
+          class="text-center p-2.5 text-[20px] rounded-md font-bold hover:scale-110 transition-all duration-300 font-serif cursor-pointer"
+        >
+          Education
+        </div>
+
+        <div
+          id="btn-skill"
+          onclick="showSkills()"
+          class="text-center p-2.5 text-[20px] rounded-md font-bold hover:scale-110 transition-all duration-300 font-serif cursor-pointer"
+        >
+          Skills
+        </div>
+
+        <div
+          id="btn-about"
+          onclick="showAbout()"
+          class="text-center p-2.5 text-[20px] rounded-md font-bold hover:scale-110 transition-all duration-300 font-serif cursor-pointer"
+        >
+          About Me
+        </div>
+      </div>
+      <!-- my experience -->
+      <div id="experience" class="w-[calc(1440px-430px)] hidden text-[#f7fff7]">
+        <p class="audiowide-regular text-[40px]">My Experience</p>
+        <p class="audiowide-regular text-[20px] text-[#f7fff788] text-justify">
+          Led teams in hackathons, built blockchain and AI projects, enhanced
+          security, optimized applications, and gained hands-on experience in
+          UI/UX, competitive coding, and project management.
+        </p>
+        <div
+          class="flex justify-evenly gap-10 flex-wrap items-center overflow-auto max-h-[calc(100vh-350px)] mt-[20px]"
+        >
+          <!-- box1 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">01/2025</p>
+            <!-- name -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              KSHITJ2025
+            </p>
+            <!-- description -->
+            <p class="font-serif text-justify">
+              <span class="text-[#4ecdc4]">**</span>It's a hackathon organized
+              by IIT KGP, focusing on website revamp, security enhancements, AI
+              integration, and end-to-end encryption.
+            </p>
+          </div>
+          <!-- box2 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">01/2025</p>
+            <!-- name -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              PERCEPTRON
+            </p>
+            <!-- description -->
+            <p class="font-serif text-justify">
+              <span class="text-[#4ecdc4]">**</span>It's a Coding Competition
+              organized by RKMVERI, focusing on Competitive Coding and Problem
+              solving. I secured 7th position.
+            </p>
+          </div>
+          <!-- box3 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">10/2024</p>
+            <!-- name -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              HACK THE BLOCK
+            </p>
+            <!-- description -->
+            <p class="font-serif text-justify">
+              <span class="text-[#4ecdc4]">**</span>It's a hackathon organized
+              by IIT DHANBAD, focusing on Blockchain token system. Our team
+              secured 5th position on my leadership.
+            </p>
+          </div>
+          <!-- box4 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">11/2024</p>
+            <!-- name -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              UI Design Internship
+            </p>
+            <!-- description -->
+            <p class="font-serif text-justify">
+              <span class="text-[#4ecdc4]">**</span>It's a Internship organized
+              by Rahul Sir.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- my education -->
+      <div id="education" class="w-[calc(1440px-430px)] hidden text-[#f7fff7]">
+        <p class="audiowide-regular text-[40px]">My Education</p>
+        <p class="audiowide-regular text-[20px] text-[#f7fff788] text-justify">
+          Pursuing <strong>B.Sc. in Computer Science</strong> at
+          <strong>Ramakrishna Mission Vivekananda Centenary College</strong>
+          (2023–Present). Completed <strong>Higher Secondary</strong> from
+          <strong>Bishnupur Rasamanjari High School</strong> and
+          <strong>Secondary</strong> from
+          <strong>Purapara High School (H.S.)</strong>.
+        </p>
+        <div
+          class="flex justify-evenly gap-10 flex-wrap items-center overflow-auto max-h-[calc(100vh-350px)] mt-[20px]"
+        >
+          <!-- box1 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- course -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              B.Sc. Computer Science
+            </p>
+            <!-- college -->
+            <p class="font-serif text-justify">
+              Ramakrishna Mission Vivekananda Centenary College, Rahara
+            </p>
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">08/2023 - Present</p>
+            <!-- location -->
+            <p class="text-[#FFE66D] font-mono font-bold">
+              <i class="fa-solid fa-location-dot"></i>Rahara, Kolkata-118, India
+            </p>
+          </div>
+          <!-- box2 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- course -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              Higher Secondary
+            </p>
+            <!-- college -->
+            <p class="font-serif text-justify">
+              Bishnupur Rasamanjari High School
+            </p>
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">06/2021 - 04/2023</p>
+            <!-- location -->
+            <p class="text-[#FFE66D] font-mono font-bold">
+              <i class="fa-solid fa-location-dot"></i>Birbhum, West Bengal,
+              India
+            </p>
+          </div>
+          <!-- box3 -->
+          <div class="w-[450px] h-fit rounded-lg p-5 bg-[#fff5]">
+            <!-- course -->
+            <p class="text-[#f7fff7] text-[30px] font-mono font-extrabold">
+              Secondary
+            </p>
+            <!-- college -->
+            <p class="font-serif text-justify">Purapara High School (H.S.)</p>
+            <!-- timeline -->
+            <p class="text-[#4ecdc4] font-mono font-bold">up to 04/2021</p>
+            <!-- location -->
+            <p class="text-[#FFE66D] font-mono font-bold">
+              <i class="fa-solid fa-location-dot"></i>Murshidabad, West bengal,
+              India
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- my Skill -->
+      <div id="skill" class="w-[calc(1440px-430px)] text-[#f7fff7]">
+        <p class="audiowide-regular text-[40px]">My Skill</p>
+        <p class="audiowide-regular text-[20px] text-[#f7fff788] text-justify">
+          Proficient in
+          <strong>Java, C++, Python, ReactJS, Node.js, MongoDB</strong>. Skilled
+          in
+          <strong
+            >UI/UX design, AI, project management, and competitive
+            coding</strong
+          >. Experienced with
+          <strong>Git, Figma, Photoshop, TensorFlow, and MySQL</strong>.
+        </p>
+        <div
+          class="flex justify-evenly gap-10 flex-wrap items-center overflow-auto max-h-[calc(100vh-350px)] mt-[20px]"
+        >
+          <!-- Frontend -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Frontend</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- html5 -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="HTML5"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/html.png"
+                  alt="HTML5"
+                />
+              </div>
+              <!-- css -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="CSS"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/css.jpg"
+                  alt="HTML5"
+                />
+              </div>
+              <!-- js -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="JavaScript"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/js.png"
+                  alt="HTML5"
+                />
+              </div>
+              <!-- react js -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="ReactJS"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/react.png"
+                  alt="HTML5"
+                />
+              </div>
+              <!-- bootstrap -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Bootstrap"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/bootstrap.jpg"
+                  alt="HTML5"
+                />
+              </div>
+              <!-- tailwind -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Tailwind"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/taillwind.png"
+                  alt="HTML5"
+                />
+              </div>
+              <!-- xml -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="XML"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/xml.png"
+                  alt="XML"
+                />
+              </div>
+              <!-- React native -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="React Native"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Frontend/reactNative.png"
+                  alt="React Native"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Backend</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- NodeJS -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="NodeJS"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Backend/nodejs.png"
+                  alt="NodeJS"
+                />
+              </div>
+              <!-- ExpressJS -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="ExpressJS"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Backend/expressJs.png"
+                  alt="ExpressJS"
+                />
+              </div>
+              <!-- NextJS -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="NextJS"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Backend/nextJs.png"
+                  alt="NextJS"
+                />
+              </div>
+              <!-- PHP -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="PHP"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Backend/php.png"
+                  alt="PHP"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- DataBase -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Database</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- MongoDB -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="MongoDB"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/database/mongoDB.png"
+                  alt="MongoDB"
+                />
+              </div>
+              <!-- MySQL -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="MySQL"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/database/Mysql.png"
+                  alt="MySQL"
+                />
+              </div>
+              <!-- Oracle -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Oracle"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/database/oracle.png"
+                  alt="Oracle"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Language -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Programming Language</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- C -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="C"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Language/c.png"
+                  alt="C"
+                />
+              </div>
+              <!-- C++ -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="C++"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Language/c++.png"
+                  alt="C++"
+                />
+              </div>
+              <!-- Java -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Java"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Language/java.png"
+                  alt="Java"
+                />
+              </div>
+              <!-- Python -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Python"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Language/python.jpg"
+                  alt="Python"
+                />
+              </div>
+              <!-- R -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="R"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/Language/R.jpg"
+                  alt="R"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Library -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Library & Frameworks</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- Pandas -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Pandas"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/library/pandas.png"
+                  alt="Pandas"
+                />
+              </div>
+              <!-- NumPy -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="NumPy"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/library/numpy.png"
+                  alt="NumPy"
+                />
+              </div>
+              <!-- Mathplotlib -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Matplotlib"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/library/mathplotlib.png"
+                  alt="Matplotlib"
+                />
+              </div>
+              <!-- Tensor -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Tensor"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/library/tensor.png"
+                  alt="Tensor"
+                />
+              </div>
+              <!-- Turtle -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Turtle"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/library/turtle.jpg"
+                  alt="Turtle"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Tools -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Tools & IDEs</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- Git -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Git"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/git.png"
+                  alt="Git"
+                />
+              </div>
+              <!-- VS Code -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="VSCode"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/vscode.jpg"
+                  alt="VSCode"
+                />
+              </div>
+              <!-- Intellij -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Intellij IDEA"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/intellij.jpg"
+                  alt="Intellij IDEA"
+                />
+              </div>
+              <!-- RStdio -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="RStdio"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/rstudio.png"
+                  alt="RStdio"
+                />
+              </div>
+              <!-- DEV -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="DEV-C++"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/devC.jpg"
+                  alt="DEV-C++"
+                />
+              </div>
+              <!-- Code -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="CODE::BLOCKS"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/codeblock.jpg"
+                  alt="CODE::BLOCKS"
+                />
+              </div>
+              <!-- Figma -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Figma"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/figma.png"
+                  alt="Figma"
+                />
+              </div>
+              <!-- Canva -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Canva"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/canva.jpg"
+                  alt="Canva"
+                />
+              </div>
+              <!-- Jupiter -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Jupiter Notebook"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/jupiter.png"
+                  alt="Jupiter Notebook"
+                />
+              </div>
+              <!-- Google Colab -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Google Colab"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/colab.png"
+                  alt="Google Colab"
+                />
+              </div>
+              <!-- Adobe -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Adobe Photoshop 7.0"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/adobe.jpg"
+                  alt="Adobe Photoshop 7.0"
+                />
+              </div>
+              <!-- blender -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Blender"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/blender.png"
+                  alt="Blender"
+                />
+              </div>
+              <!-- Davinci Resolve 18 -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Davinci Resolve 18"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/davinci.jpg"
+                  alt="Davinci Resolve 18"
+                />
+              </div>
+              <!-- 365 -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Microsoft Office 365"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/tools/365.jpg"
+                  alt="Microsoft Office 365"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Ai -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">AI & Productive Tools</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- GPT-4o -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="GPT-4o"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/ai/gpt.png"
+                  alt="GPT-4o"
+                />
+              </div>
+              <!-- Gemini -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Gemini"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/ai/gemini.png"
+                  alt="Gemini"
+                />
+              </div>
+              <!-- Copilot -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Copilot"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/ai/copilot.jpg"
+                  alt="Copilot"
+                />
+              </div>
+              <!-- BlackBox -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="BlackBox AI"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/ai/blackbox.jpg"
+                  alt="BlackBox AI"
+                />
+              </div>
+              <!-- Google -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Google"
+              >
+                <img class="h-[50px] rounded-sm aspect-auto"
+                src="./Image/ai/google.jpg"" alt="Google" />
+              </div>
+              <!-- Site -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Google Site"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/ai/site.png"
+                  alt="Google Site"
+                />
+              </div>
+              <!-- From -->
+              <div
+                class="flex justify-center items-center text-[#4ecdc4] rounded-sm text-[50px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer p-2"
+                title="Google From"
+              >
+                <img
+                  class="h-[50px] rounded-sm aspect-auto"
+                  src="./Image/ai/from.png"
+                  alt="Google From"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Others -->
+          <div class="w-[450px] rounded-lg p-3 bg-[#fff5]">
+            <p class="audiowide-regular text-[30px]">Others</p>
+            <div class="flex flex-wrap justify-evenly gap-3">
+              <!-- UI/UX Design -->
+              <div
+                class="flex justify-center items-center text-[#eee66d] rounded-sm text-[20px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer py-2 px-5 font-mono font-extrabold"
+                title="Oracle"
+              >
+                <li>UI/UX Design</li>
+              </div>
+              <!-- Project Management -->
+              <div
+                class="flex justify-center items-center text-[#eee66d] rounded-sm text-[20px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer py-2 px-5 font-mono font-extrabold"
+                title="Oracle"
+              >
+                <li>Project Management</li>
+              </div>
+              <!-- Prompt Engineering -->
+              <div
+                class="flex justify-center items-center text-[#eee66d] rounded-sm text-[20px] bg-[#0003] hover:scale-110 duration-300 transition-all cursor-pointer py-2 px-5 font-mono font-extrabold"
+                title="Oracle"
+              >
+                <li>Prompt Engineering</li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- about me -->
+      <div id="about" class="w-[calc(1440px-430px)] hidden text-[#f7fff7]">
+        <p class="audiowide-regular text-[40px]">About Me</p>
+        <p class="audiowide-regular text-[20px] text-[#f7fff788] text-justify">
+          I am a passionate tech enthusiast skilled in software
+          development, project management, and UI/UX design, with a strong
+          problem-solving mindset and a drive for innovation.
+        </p>
+        <div
+          class="flex justify-between gap-10 flex-wrap items-start overflow-auto max-h-[calc(100vh-350px)] mt-[20px]"
+        >
+          <!-- left -->
+          <div class="flex flex-col w-[450px] gap-2 items-start justify-start">
+            <!-- name -->
+            <p class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Name:
+              <span class="text-[#4ecdc4] text-[25px] font-mono font-extrabold"
+                >Rajdeep Pal</span
+              >
+            </p>
+            <!-- Nationality -->
+            <p class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Nationality:
+              <span class="text-[#4ecdc4] text-[25px] font-mono font-extrabold"
+                >Indian</span
+              >
+            </p>
+            <!-- Mobile -->
+            <p class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Phone:
+              <span class="text-[#4ecdc4] text-[25px] font-mono font-extrabold"
+                >8250451450</span
+              >
+            </p>
+            <!-- Email -->
+            <p class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Email:
+              <span class="text-[#4ecdc4] text-[25px] font-mono font-extrabold"
+                >rajdeeppalofficial@gmail.com</span
+              >
+            </p>
+            <!-- Address -->
+            <p class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Address:
+              <span class="text-[#4ecdc4] text-[25px] font-mono font-extrabold"
+                >Murshidabad, West Bengal, India</span
+              >
+            </p>
+          </div>
+          <!-- Right -->
+          <div class="flex flex-col w-[450px] gap-2 items-start justify-start">
+            <!-- Language -->
+            <p class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Language:
+              <span class="text-[#4ecdc4] text-[25px] font-mono font-extrabold"
+                >Bengali(Native), Hindi, English</span
+              >
+            </p>
+            <!-- Activities -->
+            <div class="text-[15px] font-serif font-normal text-[#f7fff7]">
+              Activities:
+              <p class="text-[#4ecdc4] text-[20px] font-mono font-extrabold">
+                Creative Arts:
+                <span
+                  class="text-[#ffee00] text-[20px] font-mono font-extrabold"
+                >
+                  Passionate about drawing, singing, and story writing
+                </span>
+              </p>
+              <p class="text-[#4ecdc4] text-[20px] font-mono font-extrabold">
+                Directing:
+                <span
+                  class="text-[#ffee00] text-[20px] font-mono font-extrabold"
+                >
+                  Experience in cinematography, directing and capturing engaging
+                  visual content.
+                </span>
+              </p>
+              <p class="text-[#4ecdc4] text-[20px] font-mono font-extrabold">
+                Soft Skills:
+                <span
+                  class="text-[#ffee00] text-[20px] font-mono font-extrabold"
+                >
+                  Communication, Problem-Solving, Time Management, enhancing
+                  both technical and leadership abilities.
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // List of all sections and buttons
+        const sections = ["experience", "education", "skill", "about"];
+        const buttons = {
+          experience: document.getElementById("btn-experience"),
+          education: document.getElementById("btn-education"),
+          skill: document.getElementById("btn-skill"),
+          about: document.getElementById("btn-about"),
+        };
+
+        function showSection(sectionId) {
+          // Hide all sections and remove active styling from all buttons
+          sections.forEach((id) => {
+            document.getElementById(id).style.display =
+              id === sectionId ? "block" : "none";
+
+            // Update button styling
+            if (id === sectionId) {
+              buttons[id].classList.add("bg-[#4ecdc4]", "text-[#292f63]");
+              buttons[id].classList.remove("bg-[#fff3]", "text-[#f7fff7]");
+            } else {
+              buttons[id].classList.add("bg-[#fff3]", "text-[#f7fff7]");
+              buttons[id].classList.remove("bg-[#4ecdc4]", "text-[#292f63]");
+            }
+          });
+        }
+
+        // Set default section to "Experience"
+        showSection("experience");
+
+        // Attach functions to global scope
+        window.showExperience = () => showSection("experience");
+        window.showEducation = () => showSection("education");
+        window.showSkills = () => showSection("skill");
+        window.showAbout = () => showSection("about");
+      });
+    </script>
+  </body>
+</html>
