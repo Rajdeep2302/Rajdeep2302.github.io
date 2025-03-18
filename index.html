@@ -75,10 +75,14 @@
           class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
           >Resume</a
         >
-        <a href="/work.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+        <a
+          href="/work.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
           >Work</a
         >
-        <a href="/contact.html" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+        <a
+          href="/contact.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
           >Contact</a
         >
         <a
@@ -123,41 +127,53 @@
           <!-- social media icons -->
           <div class="flex gap-5 mt-[30px]">
             <!-- cv download -->
-            <div
-              class="text-[#f7fff7] text-[20px] font-mono border-1 rounded-full flex justify-center items-center px-5 py-2 cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
-            >
-              DOWNLOAD CV <i class="fa-solid fa-download"></i>
-            </div>
+            <a href="/Image/others/cv.pdf">
+              <div
+                class="text-[#f7fff7] text-[20px] font-mono border-1 rounded-full flex justify-center items-center px-5 py-2 cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+              >
+                DOWNLOAD CV <i class="fa-solid fa-download"></i>
+              </div>
+            </a>
             <!-- github -->
-            <div
-              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
-            >
-              <i class="fa-brands fa-github"></i>
-            </div>
+            <a href="https://github.com/Rajdeep2302">
+              <div
+                class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+              >
+                <i class="fa-brands fa-github"></i>
+              </div>
+            </a>
             <!-- linkedin -->
-            <div
-              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
-            >
-              <i class="fa-brands fa-linkedin-in"></i>
-            </div>
+            <a href="linkedin.com/in/rajdeep-pal-1b12b02b7/">
+              <div
+                class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+            </a>
             <!-- hackerRank -->
-            <div
-              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
-            >
-              <i class="fa-brands fa-hackerrank"></i>
-            </div>
+            <a href="https://www.hackerrank.com/profile/www_rajdeep_gov1">
+              <div
+                class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+              >
+                <i class="fa-brands fa-hackerrank"></i>
+              </div>
+            </a>
             <!-- instagram -->
-            <div
-              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
-            >
-              <i class="fa-brands fa-instagram"></i>
-            </div>
+            <a href="https://www.instagram.com/rajdeeppal2005/">
+              <div
+                class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
             <!-- facebook -->
-            <div
-              class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
-            >
-              <i class="fa-brands fa-facebook"></i>
-            </div>
+            <a href="https://www.facebook.com/profile.php?id=100092589737963">
+              <div
+                class="text-[#f7fff7] py-1 px-3 rounded-full border-1 text-[30px] cursor-pointer hover:scale-105 translation-all duration-300 bg-transparent hover:bg-[#4ECDC4] hover:text-[#292F36]"
+              >
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+            </a>
           </div>
         </div>
         <!-- right contents -->
@@ -199,7 +215,7 @@
           </div>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-              let count = 20;
+              let count = 8;
               const countElement = document.getElementById("experience");
               let a = 0;
               const interval = setInterval(() => {
@@ -222,7 +238,7 @@
           </div>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-              let count = 10;
+              let count = 3;
               const countElement = document.getElementById("projects");
               let a = 0;
               const interval = setInterval(() => {
@@ -237,7 +253,10 @@
           </script>
         </div>
         <!-- technologies -->
-        <div class="flex items-center gap-2">
+        <div
+          class="flex items-center gap-2"
+          title="MERN Stack, JavaScript, Java, C, Python"
+        >
           <p class="text-[50px] tilt-prism" id="technologies">0</p>
           <div class="text-[20px] space-mono-regular">
             <p>Technologies</p>
@@ -268,7 +287,7 @@
           </div>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-              let count = 30;
+              let count = 28;
               const countElement = document.getElementById("code");
               let a = 0;
               const interval = setInterval(() => {
