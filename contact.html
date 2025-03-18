@@ -13,7 +13,7 @@
       content="HTML, CSS, JavaScript, Portfolio, Rajdeep Pal, Rajdeep, Pal, Rajdeep Pal Portfolio, Web developer, Web developer Rajdeep Pal"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="icon" href="/Image/bg2.png" type="image/x-icon" />
+    <link rel="icon" href="../Image/bg2.png" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -53,14 +53,17 @@
     class="max-w-screen min-h-screen flex flex-col items-center bg-[#292f36]"
   >
     <!-- fully functional navbar -->
-    <nav class="mt-5 h-[50px] w-[1440px] flex justify-between items-center">
-      <div
+    <nav
+      class="mt-5 h-[50px] 2xl:w-[1440px] xl:w-[1024px] w-full px-4 xl:px-0 flex justify-between items-center"
+    >
+      <a
+      href="/"
         class="macondo-swash-caps-regular cursor-pointer text-[#f7fff7] text-[40px] font-extrabold text-center"
       >
         RajdeepPal<span class="text-[#4ecdc4]">.me</span>
-      </div>
+      </a>
       <div
-        class="aclonica-regular text-[20px] font-bold text-[#f7fff7] flex justify-evenly items-center"
+        class="aclonica-regular hidden text-[20px] font-bold text-[#f7fff7] lg:flex justify-evenly items-center"
       >
         <a href="/" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
           >Home</a
@@ -79,8 +82,8 @@
           href="/work.html"
           class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
           >Work</a
-          >
-          <a
+        >
+        <a
           href="/contact.html"
           class="scale-115 text-[#4ecdc4] mx-[20px] underline"
           >Contact</a
@@ -91,11 +94,77 @@
           >Hire Me</a
         >
       </div>
+      <div onclick="openMenu()" class="lg:hidden flex flex-col gap-2 cursor-pointer">
+        <div class="w-9 h-1 bg-white rounded-full"></div>
+        <div class="w-9 h-1 bg-white rounded-full"></div>
+        <div class="w-9 h-1 bg-white rounded-full"></div>
+      </div>
     </nav>
+
+    <!-- mobile view -->
+    <div id="menu" class="w-screen hidden h-screen fixed z-50 justify-end">
+      <div
+        class="sm:w-[500px] w-screen h-fit py-5 rounded-bl-[50px] flex flex-col items-center bg-[#1d3557] aclonica-regular gap-5 text-[20px] font-bold text-[#f7fff7]"
+      >
+        <div class="w-full flex justify-between">
+          <a
+            href="/"
+            class="macondo-swash-caps-regular px-3 cursor-pointer text-[#f7fff7] text-[30px] font-extrabold text-center"
+          >
+            RajdeepPal<span class="text-[#4ecdc4]">.me</span>
+          </a>
+          <div
+            onclick="closeMenu()"
+            class="w-9 h-9 cursor-pointer flex flex-col mt-5 mr-2"
+          >
+            <div class="w-9 h-1 bg-white rounded-full -mb-1 rotate-45"></div>
+            <div class="w-9 h-1 bg-white rounded-full -rotate-45"></div>
+          </div>
+        </div>
+        <a href="/" class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Home</a
+        >
+        <a
+          href="/service.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Service</a
+        >
+        <a
+          href="/resume.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Resume</a
+        >
+        <a
+          href="/work.html"
+          class="hover:scale-115 hover:text-[#4ecdc4] mx-[20px]"
+          >Work</a
+        >
+        <a
+          href="/contact.html"
+          class="scale-115 text-[#4ecdc4] mx-[20px] underline"
+          >Contact</a
+        >
+        <a
+          href="/contact.html"
+          class="hover:scale-115 px-5 py-2 bg-[#4ecdc4] text-[#292f36] rounded-full"
+          >Hire Me</a
+        >
+      </div>
+    </div>
+
+    <script>
+      const menu = document.getElementById("menu");
+      function openMenu() {
+        menu.style.display = "flex";
+      }
+      function closeMenu() {
+        menu.style.display = "none";
+      }
+    </script>
 
     <!-- main content1 -->
     <main
-      class="mt-5 w-[1440px] min-h-[calc(100vh-90px)] text-[#f7fff7] flex flex-wrap justify-evenly items-center"
+      class="mt-5 2xl:w-[1440px] xl:w-[1024px] w-full min-h-[calc(100vh-90px)] text-[#f7fff7] flex flex-wrap justify-evenly items-center"
     >
       Contact Me page is Under Development
     </main>
